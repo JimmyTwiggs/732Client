@@ -1,16 +1,34 @@
 package com.example.miller732client;
 
 import android.app.Activity;
+import android.location.Location;
 import android.os.Bundle;
+import android.text.format.Time;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class MainClientActivity extends Activity {
+	
+	private static TextView timeText, latlongText;
+	private static Time now = new Time(Time.getCurrentTimezone());
+	private static Location here = new Location("gps");
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main_client);
+		
+		timeText = (TextView) this.findViewById(R.id.TimeText);
+		latlongText = (TextView) this.findViewById(R.id.LatLongText);
+		
+		now.setToNow();
+		here.reset();
+		here.setLatitude(35.705685);
+		here.setLongitude(139.752058);
+		
+		timeText.setText(now.format("Date: %h-%d-%Y  |  Time: %r"));
+		latlongText.setText("Lat: " + here.getLatitude() + "  |  Long: " + here.getLongitude());
 	}
 
 	@Override

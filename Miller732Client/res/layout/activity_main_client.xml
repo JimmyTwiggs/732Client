@@ -9,8 +9,26 @@
     tools:context="com.example.miller732client.MainClientActivity" >
 
     <TextView
+        android:id="@+id/HelloText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_centerHorizontal="true"
+        android:text="@string/client1" />
+
+    <TextView
+        android:id="@+id/TimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/HelloText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="58dp" />
+    
+    <TextView
+        android:id="@+id/LatLongText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TimeText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="58dp" />
 
 </RelativeLayout>

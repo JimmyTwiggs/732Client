@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Miller732Client</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="client1">Client Program Welcomes You</string>
     <string name="action_settings">Settings</string>
 
 </resources>
